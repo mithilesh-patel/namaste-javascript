@@ -9,9 +9,29 @@ function x(y) {
   y();
 }
 
-function third() {
-  console.log('This function iscalled inside another function');
-  
-}
 
-x(third);
+
+x(function another() {
+  console.log('another');
+});
+// ========================================================
+
+
+
+
+// function attachEventListener() {
+    
+//     let x=0;
+//     document.getElementById("clickme").addEventListener('click', function show() {
+//         console.log("Button clicked", ++x);
+        
+//     })
+// }
+
+// attachEventListener();
+
+// In this case using a global variable is not a good idea as it is not secure for data hiding
+// so we will use closures here
+
+
+// =================================================
